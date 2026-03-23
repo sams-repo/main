@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Hello World"
+echo "This is a script that runs the summary of maths score in durotoye"
+
+student_name="Oluwafemi Bola-Ahmed Durotoye"
+TMP="175"
+MA="100"
+percentage="$(( MA*100/ TMP))"
+
+if [[ $percentage -gt 70 ]]; then
+	echo "$student_name scored an A: Excellent"
+elif [[ $percentage -gt 65 && $percentage -lt 71 ]]; then
+	echo "$student_name scored a B: Very Good"
+elif [[ $percentage -gt 59 && $percentage -lt 66 ]]; then
+	echo "$student_name scored a C: Good"
+else 
+	echo "$student_name failed: Need Improvement"
+fi
